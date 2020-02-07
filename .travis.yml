@@ -1,0 +1,28 @@
+os: linux
+
+language: node_js
+
+node_js:
+  - 12.14.0
+
+# Safelist
+branches:
+  only:
+    - master
+
+jobs:
+  include:
+    - script:
+        - mkdir web
+        - mv index.html web/index.html
+        - cd web
+      deploy:
+        provider: pages
+        cleanup: false
+        token: $GITHUB_TOKEN
+        target_branch: master
+        keep_history: false
+        edge: true
+        commit_message: Deploy Travis CI to %{target_branch} branch
+        on:
+          branch: master
