@@ -1,6 +1,6 @@
 # Vue.js basket sample
 
-Sample HTML demo of the [Vue Mastery video](https://vimeo.com/247494684).
+Vue.js sample basket demo of the [Vue Mastery video](https://vimeo.com/247494684).
 
 ## Licence
 
